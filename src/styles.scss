@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+
+$fa-font-path: '~font-awesome/fonts/';
+$font-size-base: 0.875rem;
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import '~font-awesome/scss/font-awesome.scss';
+
+/* Provide sufficient contrast against white background */
+body {
+  background: #efe9e9;
+}
+
+.ah-bg-cover-image {
+  background-image: url(assets/images/imahmer-cover.jpg);
+  background-size: cover;
+  background-position: bottom center;
+}
+
+.ah-content {
+  .h-50 {
+    .h-100 {
+      height: calc(100% - 1rem) !important; // h-100
+    }
+  }
+}
