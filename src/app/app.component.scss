@@ -57,3 +57,58 @@
 .ah-dashboard-title h2 span:nth-child(2) {
     color: rgb(255, 180, 0);
 }
+
+.ah-dashboard-title {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 2.5rem;
+  }
+  .ah-dashboard-title {
+    color: #333;
+    position: relative;
+    width: max-content;
+    margin: 0 auto;
+    transform: skewX(0deg) translateX(0px);
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  .ah-dashboard-title:hover {
+    transform: skewX(-15deg) translateX(18px);
+    color: aquamarine;
+  }
+  .ah-dashboard-title::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 6px;
+    width: 0%;
+    background: #fff;
+    overflow: hidden;
+    transition: 0.3s;
+    z-index: 1;
+    transform: rotate(5deg);
+  }
+  .ah-dashboard-title:hover::before {
+    width: 110%;
+    left: -5%;
+  }
+  .ah-dashboard-title::after {
+    content: attr(data-text);
+    position: absolute;
+    left: -5%;
+    top: 0;
+    height: 50%;
+    overflow: hidden;
+    transform: skewX(0deg);
+    background: #fff;
+    width: 110%;
+    transition: 0.3s;
+    color: #333;
+  }
+  .ah-dashboard-title:hover::after {
+    transform: skewX(25deg) translateX(-15px);
+    color: aqua;
+  }
